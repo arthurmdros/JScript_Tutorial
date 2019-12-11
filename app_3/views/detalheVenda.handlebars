@@ -1,0 +1,64 @@
+<style>
+    header#main-header{
+    width: 100%;
+    height: 60px;
+    background: #da552f;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #333;
+}
+
+div{
+    max-width: 300px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+a{
+    height: 42px;
+    border-radius: 5px;
+    border: 2px solid #da552f;
+    background: none;
+    margin-top: 10px;
+    color: #da552f;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+a:hover{
+    background: #da552f;
+    color: #fff;
+}
+</style>
+<body>
+    <div>
+<h1>Informações:</h1>
+{{#each vendas}}    
+    <h2>Código: {{id}}</h2>
+    <h3>Vendedor: {{vendedor}}</h3>
+    <h3>Cliente: {{cliente}}</h3>
+    <p>Produto: {{produto}}</p>           
+    <p>Valor: {{valor}}</p>
+    <hr>
+{{/each}}
+
+<a href="/inicio">Página Inicial</a>
+</div>
+</body>

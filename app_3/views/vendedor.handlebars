@@ -1,0 +1,11 @@
+<h1>Listagem de vendedores: </h1>
+{{#each vendedores}}
+    <h3>Código: {{id}}</h2>
+    <p>Usuário: {{nome}}</p>    
+    <p>Cargo: {{cargo}}</p>
+    <a href="/deletarvendedor/{{id}}">Deletar</a> 
+    <a href="/alterarvendedor/{{id}}">Alterar</a>               
+    <hr>    
+{{/each}}
+
+<a href="/inicio">Página Inicial</a>
