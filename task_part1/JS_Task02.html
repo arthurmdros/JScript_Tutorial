@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 02</title>        
+    </head>
+    <body>
+        <p><b>Adicionar itens:</b></p>
+        <div id="app">
+            <ul>    
+            </ul>
+            <input type="text" placeholder="Adicionar item">
+            <button>Adicionar</button>            
+        </div>
+        <script>
+            var btnElement = document.querySelector('#app button');
+            var listElement = document.querySelector('#app ul');
+            var inputElement = document.querySelector('#app input');
+
+            var nomes = ["Diego","Lucas","Gabriel"];
+
+            function setarElementos(){
+                listElement.innerHTML = ''; 
+                for(item of nomes){
+                    var itemElement = document.createElement('li');
+                    var textElement = document.createTextNode(item);
+
+                    itemElement.appendChild(textElement);
+                    listElement.appendChild(itemElement);
+                }
+            }
+            setarElementos();
+            btnElement.onclick = function adicionar(){
+                var text = inputElement.value;
+                nomes.push(text);
+
+                inputElement.value = '';
+                setarElementos();
+            }
+        
+        </script>
+    </body>
+</html>

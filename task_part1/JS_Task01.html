@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 01</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botao">Adicionar</button>
+            <div class="box"></div>
+        </div>
+        <script>   
+            var containerElement = document.querySelector('#app')         
+            var btnElement = document.querySelector('.botao');
+            var boxElement = document.querySelector('.box');
+            btnElement.onclick = function(){
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                containerElement.appendChild(boxElement);
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }            
+            btnElement.onmouseover = function(){
+                var newColor = getRandomColor(); // #E943F0
+                boxElement.style.backgroundColor = newColor;
+            }            
+        </script>
+    </body>
+</html>
