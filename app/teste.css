@@ -1,0 +1,7 @@
+body{
+    margin: 0;
+    background: cadetblue;    
+}
+div#app{
+    text-align: center;
+}
